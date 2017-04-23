@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_InsertarTemas`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `isp_InsertarTemas`(
 	pIdCurso INT,
     pIdUsuario INT, 
 	pNombreTema VARCHAR(50)
