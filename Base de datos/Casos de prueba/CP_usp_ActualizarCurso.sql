@@ -64,3 +64,5 @@ select * from cursos;
 select * from cursosxusuario;
 select * from usuarios
 
+
+

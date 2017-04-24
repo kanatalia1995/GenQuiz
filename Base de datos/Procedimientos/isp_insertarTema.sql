@@ -3,21 +3,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `isp_InsertarTemas`(
     pIdUsuario INT, 
 	pNombreTema VARCHAR(50)
 )
-BEGIN
-
-	DECLARE msgError VARCHAR(255);
-    
-	IF NOT EXISTS(
-				  SELECT 'True'
-				  FROM  temas t, cursosxusuario cu
-				  WHERE  t.idCurso = pIdCurso AND t.nombreTema = pNombreTema AND 
-                  cu.idCurso = pIdCurso  AND cu.idUsuario= pIdUsuario
-				 )
-		THEN
-			INSERT INTO temas(idCurso,nombreTema) VALUES (pIdCurso,pNombreTema);
-	ELSE
-        SIGNAL SQLSTATE '45000';
-		SET msgError = 'El curso que desea ingresar ya se encuentra en el sistema. Favor revisar que el código y/o el nombre sean correctos';
-	END IF;
-
+BEGIN   
+	CALL vsp_validarTemaNuevo(pIdCurso,pIdUsuario,pNombreTema);
+	INSERT INTO temas(nombre_tema,idCurso_tema) VALUES (pNombreTema,pIdCurso);
+    CALL asp_temaModificado(pIdUsuario,LAST_INSERT_ID());
 END
