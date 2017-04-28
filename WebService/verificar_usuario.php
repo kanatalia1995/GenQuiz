@@ -1,7 +1,7 @@
 <?php
  
  require("DataBase.php");
- $dataBase = new DataBase("localhost","root","123456","genQuiz"); // nombre de la base de datos
+ $dataBase = new DataBase("localhost","root","Deadpool","genQuiz"); // nombre de la base de datos
 
 $correo = $_POST['correo'];
 $contrasena=  $_POST['contrasena'];

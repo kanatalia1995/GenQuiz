@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio de sesión - GenQuiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="personalCSS.css">
+	<script type="text/javascript" src="personalJS.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<body>
+	<!--Encabezado de la página-->
+	<div class="container">
+		<div class="jumbotron">
+			<h1 align="center">GenQuiz</h1>
+		</div>
+	</div>
+	<!--Fin del encabezado-->
+
+	<!--Contenedor para la pantalla de log in-->
+	<div class="container">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6">
+			<div class="jumbotron">
+
+				<form action="" method="POST" id="formularioIngreso" role="form">
+					<!--Sección de ingreso de nombre o correo de usuario-->
+					<div class="form-group">
+						<h3>Usuario</h3>
+						<input type="text" class="form-control" placeholder="Email de usuario." id="correo">
+					</div>
+					
+					<!--Sección de ingreso de email-->
+					<div class="form-group">
+						<h3>Contraseña</h3>
+						<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+					</div>
+
+					<!--Botón para iniciar sesión-->
+					<div class="form-group">
+						<button type="button" class="btn btn-large btn-primary form-control" id="bLogIn" onclick="validarLogIn()">Ingresar</button>
+					</div>
+
+					<!--Botón para registrarse-->
+					<div class="form-group">
+						<button type="button" class="btn btn-large btn-info pull-left" id="bSignIn" data-toggle="modal" data-target="#popUpRegistrarse">Registrese</button>
+
+						<!--Inicio del modal-->
+						<div class="modal fade" id="popUpRegistrarse" role="dialog">
+		        			<div class="modal-dialog">
+		        				<div class="modal-content">
+		        					<!--Modal header-->
+		        						<div class="modal-header">
+		        							<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        							<h2 class="modal-title">Registro de usuario</h2>
+		       							</div>
+		   							<!--Modal Body-->
+		   							<div class="modal-body">
+		   								<div class="form">
+		  									<form class="form-horizontal">
+		  										<!--Datos a solicitar-->
+		  										<div class="form-group">
+		  											<h3>Nombre del usuario</h3>
+		  											<input type="text" class="form-control" placeholder="Nombre de usuario" id="iUserName">
+		  										</div>
+		    									<div class="form-group">
+													<h3>Correo</h3>
+													<input type="text" class="form-control" placeholder="Email de usuario." id="iEmailUser">
+												</div>
+
+												<div class="form-group">
+													<h3>Contraseña</h3>
+													<input type="password" class="form-control" placeholder="Contraseña" id="iPasswordUser">
+												</div>
+											</form>
+										</div>
+									</div>
+		        					<!--Modal Footer-->
+		        					<div class="modal-footer">
+		        						<button type="button" class="btn btn-default pull-left" id="bCancelCursos" data-dismiss="modal">Cancelar</button>
+		        						<button type="button" class="btn btn-success pull-right" id="bVerCursos">Guardar cambios</button>
+		        					</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        		<!--Fin del modal-->
+
+					</div>
+
+					<!--Botón para recordar contraseña-->
+					<div class="form-group">
+						<button type="button" class="btn-link pull-right" data-toggle="modal" data-target="#popUpContraseña" id="bForgottenPassword">¿Olvidó su contraseña?</button>
+						<!--Inicio del modal-->
+						<div class="modal fade" id="popUpContraseña" role="dialog">
+		        			<div class="modal-dialog">
+		        				<div class="modal-content">
+		        					<!--Modal header-->
+		        						<div class="modal-header">
+		        							<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        							<h2 class="modal-title">Recuperar contraseña</h2>
+		       							</div>
+		   							<!--Modal Body-->
+		   							<div class="modal-body">
+		   								<div class="form">
+		  									<p>Lo necesario para recuperar la contraseña</p>
+		  									<p>Darle un registro para una nueva contraseña?</p>
+		  									<p>Necesario?</p>
+										</div>
+									</div>
+		        					<!--Modal Footer-->
+		        					<div class="modal-footer">
+		        						<button type="button" class="btn btn-default pull-left" id="bCancelCursos" data-dismiss="modal">Cancelar</button>
+		        						<button type="button" class="btn btn-success pull-right" id="bVerCursos">Guardar cambios</button>
+		        					</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        		<!--Fin del modal-->
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="col-lg-3"></div>
+	</div>
+
+</body>
+</html>
