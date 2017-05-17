@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Cursos - GenQuiz</title>
@@ -7,14 +7,17 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
 </head>
 <body>
 	<!--Encabezado de la página-->
-	<div class="container">
-		<div class="jumbotron">
-			<h1 align="center">GenQuiz</h1>
-		</div>
-	</div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 align="center">GenQuiz</h1>
+        </div>
+    </div>
 	<!--Fin del encabezado de la página-->
 
 	<nav class="navbar navbar-default">
@@ -99,9 +102,15 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="col-lg-1"></div>
-	<div>árbol de preguntas, quices y temas</div>
-	<div class="col-lg-3">hola</div>
+	<div class="col-lg-1">árbol de preguntas, quices y temas</div>
+	<div class="content">
+        <div ng-controller="cursosController" class="col-lg-3">
+            <ul>
+                <li ng-repeat="thing in things">{{thing}}</li>
+            </ul>
+        </div>
+    </div>
+
 
 </body>
 </html>

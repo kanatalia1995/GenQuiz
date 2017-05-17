@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>GenQuiz</title>
@@ -7,97 +7,17 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
 </head>
 <body>
 	<!--Encabezado de la página-->
-	<div class="container">
-		<div class="jumbotron">
-			<h1 align="center">GenQuiz</h1>
-		</div>
-	</div>
+	<header ng-include="'header.html'"></header>
+    
 	<!--Fin del encabezado de la página-->
 
-	<nav class="navbar navbar-default">
-  		<div class="container-fluid">
-    		<!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header">
-    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    			<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-      			</button>
-      			<a class="navbar-brand">Menú</a>
-    		</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      			<ul class="nav navbar-nav">
-        			<li>
-        				<a id="opPerfil" href="principalPerfil.html">Perfil</a>
-        			</li>
-        			<li>
-        				<a id="opCursos" data-toggle="modal" data-target="#popUpWindowCursos" >Cursos</a>
-
-        				<!--Inicio del modal-->
-        				<div class="modal fade" id="popUpWindowCursos" role="dialog">
-        					<div class="modal-dialog">
-        						<div class="modal-content">
-        							<!--Modal header-->
-        							<div class="modal-header">
-        								<button type="button" class="close" data-dismiss="modal">&times;</button>
-        								<h2 class="modal-title">Cursos</h2>
-
-        							</div>
-        							<!--Modal Body-->
-        							<div class="modal-body">
-        								<div class="form">
-        									<label class="radio-inline">
-      											<input type="radio" name="optradio">Elementos de computación
-    										</label>
-        								</div>
-        							</div>
-        							<!--Modal Footer-->
-        							<div class="modal-footer">
-        								<button type="button" class="btn btn-primary pull-right" id="bVerCursos">Ver</button>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-        				<!--Fin del modal-->
-        			</li>
-      			</ul>
-      	
-				<form class="navbar-form navbar-right">
-        			<button type="button" id="bSalirMain" class="btn btn-default" data-toggle="modal" data-target="#popUpWindowMain">Salir</button>
-        			<!--Modal para cerrar sesión-->
-        			<div class="modal fade" id="popUpWindowMain" role="dialog">
-        				<div class="modal-dialog">
-        					<div class="modal-content">
-        						<!--header-->
-        						<div class="modal-header">
-        							<button type="button" class="close" data-dismiss="modal">&times;</button>
-        							<h2 class="modal-title">Cerrar sesión</h2>
-        						</div>
-        						<!--body-->
-        						<div class="modal-body">
-        							<div class="form">
-        								<p>¿Está seguro que desea cerrar la sesión?</p>
-        							</div>
-        						</div>
-        						<!--button-->
-        						<div class="modal-footer">
-        							<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Cancelar</button>
-        							<button type="button" class="btn btn-success pull-left" id="bAceptarCS">Aceptar</button>
-        						</div>
-          					</div>
-        				</div>
-        			</div>
-        			<!--Final del modal-->
-				</form>
-    		</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+    <ng-include src="'navBarHome.html'"></ng-include>
 
 	<div class="container">
 		<div class="col-lg-3"></div>
@@ -106,7 +26,7 @@
 			<div class="media" align="center">
 				<div class="media-left media-middle">
 					<a href="#">
-						<img class="media-object" src="users.png">
+						<img class="media-object" src="img/users.png">
 					</a>
 				</div>
 			</div>

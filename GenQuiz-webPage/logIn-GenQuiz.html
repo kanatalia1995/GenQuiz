@@ -9,7 +9,10 @@
 	<script type="text/javascript" src="personalJS.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<body>
+	<link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
+    <script src="app\app.js"></script>
+<body ng-app=myModal>
 	<!--Encabezado de la página-->
 	<div class="container">
 		<div class="jumbotron">
@@ -24,22 +27,22 @@
 		<div class="col-lg-6">
 			<div class="jumbotron">
 
-				<form action="" method="POST" id="formularioIngreso" role="form">
+				<form name="userForm">
 					<!--Sección de ingreso de nombre o correo de usuario-->
 					<div class="form-group">
 						<h3>Usuario</h3>
-						<input type="text" class="form-control" placeholder="Email de usuario." id="correo">
+						<input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Email de usuario." required/>
 					</div>
 					
 					<!--Sección de ingreso de email-->
 					<div class="form-group">
 						<h3>Contraseña</h3>
-						<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+						<input type="password" name="password" ng-model="user.password" class="form-control" placeholder="Contraseña" required/>
 					</div>
 
 					<!--Botón para iniciar sesión-->
 					<div class="form-group">
-						<button type="button" class="btn btn-large btn-primary form-control" id="bLogIn" onclick="validarLogIn()">Ingresar</button>
+						<button type="submit" class="btn btn-large btn-primary form-control">Ingresar</button>
 					</div>
 
 					<!--Botón para registrarse-->
@@ -70,7 +73,7 @@
 												</div>
 
 												<div class="form-group">
-													<h3>Contraseña</h3>
+													<label>Contraseña</label>
 													<input type="password" class="form-control" placeholder="Contraseña" id="iPasswordUser">
 												</div>
 											</form>

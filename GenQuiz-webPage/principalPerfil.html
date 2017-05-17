@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>GenQuiz</title>
@@ -8,14 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="personalCSS.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\lib\angular-route.min.js"></script>
+    <script src="app\app.js"></script>
 
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1 align="center">GenQuiz</h1>
-		</div>
-	</div>
+	<header ng-include=" 'header.html' "></header>
 
 	<nav class="navbar navbar-default">
   		<div class="container-fluid">
