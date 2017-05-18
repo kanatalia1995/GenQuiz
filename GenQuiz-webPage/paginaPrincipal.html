@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>GenQuiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
+</head>
+<body>
+	<!--Encabezado de la página-->
+	<header ng-include="'header.html'"></header>
+    
+	<!--Fin del encabezado de la página-->
+
+    <ng-include src="'navBarHome.html'"></ng-include>
+
+	<div class="container">
+		<div class="col-lg-3"></div>
+		<div class="well well-lg">
+			<h1 align="center">Bienvenido Usuario</h1>
+			<div class="media" align="center">
+				<div class="media-left media-middle">
+					<a href="#">
+						<img class="media-object" src="img/users.png">
+					</a>
+				</div>
+			</div>
+			<p></p><p></p>
+			<p align="center">
+				Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

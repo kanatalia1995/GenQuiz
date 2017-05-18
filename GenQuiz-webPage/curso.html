@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
-	<title>GenQuiz</title>
+	<title>Cursos - GenQuiz</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
 </head>
 <body>
 	<!--Encabezado de la página-->
-	<div class="container">
-		<div class="jumbotron">
-			<h1 align="center">GenQuiz</h1>
-		</div>
-	</div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 align="center">GenQuiz</h1>
+        </div>
+    </div>
 	<!--Fin del encabezado de la página-->
 
 	<nav class="navbar navbar-default">
@@ -99,22 +102,15 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="container">
-		<div class="col-lg-3"></div>
-		<div class="well well-lg">
-			<h1 align="center">Bienvenido Usuario</h1>
-			<div class="media" align="center">
-				<div class="media-left media-middle">
-					<a href="#">
-						<img class="media-object" src="users.png">
-					</a>
-				</div>
-			</div>
-			<p></p><p></p>
-			<p align="center">
-				Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-			</p>
-		</div>
-	</div>
+	<div class="col-lg-1">árbol de preguntas, quices y temas</div>
+	<div class="content">
+        <div ng-controller="cursosController" class="col-lg-3">
+            <ul>
+                <li ng-repeat="thing in things">{{thing}}</li>
+            </ul>
+        </div>
+    </div>
+
+
 </body>
 </html>
