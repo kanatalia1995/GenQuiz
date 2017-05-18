@@ -23,7 +23,7 @@ import java.util.concurrent.ExecutionException;
  * Created by Katerine on 23/4/2017.
  */
 public class WebService {
-    private  static String service_URL = "http://192.168.0.17:8080/GenQuiz\\WebService\\";
+    private  static String service_URL = "http://192.168.43.92:8080/GenQuiz\\WebService\\";
     private  static String login_url = "verificar_usuario.php";
     private  static String cursos_url = "obtener_CursosUsuario.php";
     private  static String temas_url ="obtener_TemasCurso.php";

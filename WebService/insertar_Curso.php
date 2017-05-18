@@ -1,7 +1,9 @@
  <?php
  
  require("DataBase.php");
- $dataBase = new DataBase("localhost","root","123456","genQuiz"); // nombre de la base de datos
+ require ("config.php");
+ $dataBase = new DataBase($HTTP,$USUARIO,$CONTRASENA,$DB); 
+
  $usuarioID= $_POST['idUsuario'];
 $nombreCurso=  $_POST['nombreCurso'];
 $codigoCurso = $_POST['codigoCurso'];
