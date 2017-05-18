@@ -35,6 +35,6 @@ public class Usuario {
 
     }
     public String toString(){
-        return cursos.get(0).temas.toString();
+        return cursos.get(0).nombre;
     }
 }

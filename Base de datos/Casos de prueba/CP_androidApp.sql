@@ -38,6 +38,6 @@ set @pIdUsuario = 15;
 set @pNombreTema = 'CPA_Tema1';
 call genquiz.isp_InsertarTemas(@pIdCurso, @pIdUsuario, @pNombreTema);
 
-select * from temas ;
-call csp_obtenerCursosUsuario(15);
+select * from temas;
+call csp_obtenerTemasCurso(15);
 

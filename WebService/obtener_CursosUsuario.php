@@ -1,12 +1,13 @@
 <?php
  
  require("DataBase.php");
- $dataBase = new DataBase("localhost","root","123456","genQuiz"); // nombre de la base de datos
+ require ("config.php");
+ $dataBase = new DataBase($HTTP,$USUARIO,$CONTRASENA,$DB);  // nombre de la base de datos
 
-//$idUsuario = $_POST['idUsuario'];
+$idUsuario = $_POST['idUsuario'];
 	// Inicio de análisis de variables
 	//Consulta a memoria
- 	 $result = $dataBase->doQuery("call csp_obtenerCursosUsuario(15);");
+ 	 $result = $dataBase->doQuery("call csp_obtenerCursosUsuario($idUsuario);");
  	 echo json_encode($result);
  	 $dataBase->close();
  	
