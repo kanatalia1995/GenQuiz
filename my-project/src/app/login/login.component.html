@@ -1,0 +1,40 @@
+<h1>
+  {{title}}
+</h1>
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+
+  <div class="jumbotron">
+
+    <form [formGroup]="loginForm" (ngSubmit)="logIn()" name="userForm"
+          [ngClass]="{'has-error':!loginForm.controls['correo'].valid && loginForm.controls['correo'].touched}">
+
+      <div class="form-group">
+        <h5>Usuario</h5>
+        <!--[(ngModel)]="credenciales.correo"-->
+        <input type="email"  placeholder="Email" class="form-control"
+               pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required [formControl]="loginForm.controls['correo']"
+               [(ngModel)]="credenciales.correo"/>
+      </div>
+
+      <div *ngIf="loginForm.controls['correo'].hasError('required') && loginForm.controls['correo'].touched"
+           class="alert alert-danger">Debe ingresar un correo.</div>
+
+      <div class="form-group">
+        <h5>Contraseña</h5>
+        <input type="password" [(ngModel)]="credenciales.contrasena" placeholder="Contraseña" name="contrasena"
+               class="form-control" required [formControl]="loginForm.controls['contrasena']"/>
+      </div>
+
+      <div *ngIf="loginForm.controls['contrasena'].hasError('required') && loginForm.controls['contrasena'].touched"
+           class="alert alert-danger">Debe agregar una contraseña.</div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-large btn-primary form-control" [disabled]="!loginForm.valid">Ingresar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

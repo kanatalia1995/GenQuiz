@@ -1,0 +1,174 @@
+<h1>
+  {{title}}
+</h1>
+
+<div class="container">
+  <div class="col-lg-3"></div>
+  <div class="well well-lg">
+    <div class="media">
+      <div class="media-left media-middle">
+        <a href="#">
+          <img class="media-object" src="users.png">
+        </a>
+      </div>
+      <div class="media-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Nombre</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="userNamePP" type="text" value="Usuario" disabled>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Correo</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="userEmailPP" type="text" value="Usuario@correo.com" disabled>
+            </div>
+          </div>
+          <div>
+            <h3>Información</h3>
+            <div class="container">
+              <div class="wellInt">
+                <p id="userInfo">Información adicional del usuario</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-lg btn-primary pull-right" id="infoEditBtnPP">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h2>Configuración de cursos</h2>
+  <div class="col-sm-10">
+    <div class="container">
+      <div class="wellEx">
+        <p id="boxCursos">Cursos impartidos</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2">
+    <div class="btn-group-vertical" role="group" aria-label="...">
+      <button class="btn btn-large btn-primary pull-right" id="cursoEditBtn" data-toggle="modal" data-target="#popUpWindowEditCursos">Editar</button>
+      <!--Inicio del modal-->
+      <div class="modal" id="popUpWindowEditCursos">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!--Modal header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Editar curso</h2>
+            </div>
+            <!--Modal Body-->
+            <div class="modal-body">
+              <div class="form">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="nameSubjectEdit" type="text" value="Elementos de computación">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Código</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="subjectCodeEdit" type="text" value="IC0000">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--Modal Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" id="bCancelCursos" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success pull-right" id="bVerCursos">Guardar cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fin del modal-->
+
+      <button class="btn btn-large btn-primary pull-right" id="cursoDelBtn" data-toggle="modal" data-target="#popUpWindowDelCursos">Eliminar</button>
+      <!--Inicio del modal-->
+      <div class="modal fade" id="popUpWindowDelCursos" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!--Modal header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Curso a eliminar</h2>
+            </div>
+            <!--Modal Body-->
+            <div class="modal-body">
+              <div class="form">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="nameSubjectAdd" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Codigo</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="subjectCodeAdd" type="text">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--Modal Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" id="bCancelCursos" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger pull-right" id="bVerCursos">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fin del modal-->
+
+      <button class="btn btn-large btn-primary pull-right" id="cursoAddBtn" data-toggle="modal" data-target="#popUpWindowAddCursos">Agregar</button>
+
+      <!--Inicio del modal-->
+      <div class="modal fade" id="popUpWindowAddCursos" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!--Modal header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Nuevo curso</h2>
+            </div>
+            <!--Modal Body-->
+            <div class="modal-body">
+              <div class="form">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="nameSubjectAdd" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Código</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" id="subjectCodeAdd" type="text">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--Modal Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" id="bCancelCursos" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success pull-right" id="bVerCursos">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fin del modal-->
+    </div>
+  </div>
+</div>

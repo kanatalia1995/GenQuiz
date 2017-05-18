@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" (click)="toggleNavbar()"
+          [attr.aria-expanded]="!isNavbarCollapsed" aria-controls="navbarContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Menú</a>
+
+  <div class="collapse navbar-collapse" id="containerNavbar">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink= "/login" routerLinkActive="active">Log In</a><!--Página principal-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink= "/cursos" routerLinkActive="active">Cursos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink= "/perfil" routerLinkActive="active">Perfil</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav navbar-right nav">
+      <button type="button" *ngIf="isAuthenticated()" class="btn btn-default"
+              (click)="logOut()" routerLinkActive="active">Salir</button>
+      <!--  data-toggle="modal" data-target="#popUpWindowMain" -->
+
+      <!--Modal para cerrar sesión-->
+      <div class="modal fade" id="popUpWindowMain" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!--header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title">Cerrar sesión</h2>
+            </div>
+            <!--body-->
+            <div class="modal-body">
+              <div class="form">
+                <p>¿Está seguro que desea cerrar la sesión?</p>
+              </div>
+            </div>
+            <!--button-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success pull-left" id="bAceptarCS">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Final del modal-->
+
+    </ul>
+  </div>
+</nav>
+
+
