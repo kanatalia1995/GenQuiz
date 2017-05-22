@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { SigninComponent } from './signin.component';
 import { SIGNIN_ROUTE } from './signin.route';
 import { SigninService } from './signin.service';
-import {NavbarComponent} from '../layouts/navbar/navbar.component';
+import { NavbarComponent } from '../layouts/navbar/navbar.component';
 
 
 @NgModule({

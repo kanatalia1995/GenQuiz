@@ -1,0 +1,19 @@
+<form name="selectForm" (ngSubmit)="confirmDelete(curso.id)">
+  <div class="modal-header">
+    <h4 class="modal-title">Seleccione un curso</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            (click)="clear()">&times;</button>
+  </div>
+  <div class="modal-body">
+    <form action="">
+      <input type="radio" *ngFor="cursosDeUsuario" [(ngModel)]="model.sex"  name="curso" value="curso">{{curso}}
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()"></button>
+    <button type="submit" class="btn btn-danger">
+      <span class="">Seleccionar</span>
+    </button>
+  </div>
+</form>
+
