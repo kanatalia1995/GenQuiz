@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from './signin.model';
 import { SigninService } from './signin.service';
 import { NavbarComponent } from '../layouts/navbar/navbar.component';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
-
+import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component ({
   selector: 'app-signin',
@@ -15,15 +14,15 @@ export class SigninComponent implements OnInit {
   private credenciales: Usuario;
   signinForm: FormGroup;
 
-  constructor (fb: FormBuilder,
-               private signinService: SigninService,
-               private navbarComponent: NavbarComponent,
-               private router: Router) {
+  constructor(fb: FormBuilder,
+              private signinService: SigninService,
+              private navbarComponent: NavbarComponent,
+              private router: Router) {
     this.credenciales = new Usuario();
     this.signinForm = fb.group({
-      'usuario': [null, Validators.required],
-      'correo' : [null, Validators.required],
-      'contrasena' : [null, Validators.required]
+      'nombre' : [null, Validators.required],
+      'contrasena' : [null, Validators.required],
+      'correo': [null, Validators.required],
     });
   }
   ngOnInit () {}
@@ -33,7 +32,7 @@ export class SigninComponent implements OnInit {
         response => {
           console.log(response[0]);
           localStorage.setItem('currentUser', JSON.stringify(response[0]));
-          console.log('Sign', localStorage.getItem('currentUser'));
+          console.log('Signin', localStorage.getItem('currentUser'));
           if (this.navbarComponent.isAuthenticated()) {
             this.router.navigateByUrl('/');
           }

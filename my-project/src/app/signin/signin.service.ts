@@ -11,10 +11,10 @@ import { Headers } from '@angular/http';
 
 @Injectable()
 export class SigninService {
-  private url = 'http://localhost:8081/GenQuiz/WebService/insertar_usuario.php'; /**Falta determinar el nombre del archivo**/
+  private url = 'http://localhost:8081/WebService/registro_usuario.php';
   constructor (private http: Http) {}
   signIn (usuario: Usuario): Observable<any> {
-    const body = 'username=' + usuario.username + '&correo=' + usuario.email + '&contrasena=' + usuario.password;
+    const body = 'nombre=' + usuario.nombre + '&contrasena=' + usuario.contrasena + '&correo=' + usuario.correo;
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 

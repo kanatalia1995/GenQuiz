@@ -1,7 +1,7 @@
 /**
- * Created by usuario on 14/05/2017.
+ * Created by Roberto Ortiz on 14/05/2017.
  */
 
 export class Usuario {
-  constructor(public username?: string, public email?: string, public password?: string) {}
+  constructor(public nombre?: string, public contrasena?: string, public correo?: string) {}
 }
