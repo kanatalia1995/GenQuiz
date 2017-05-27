@@ -8,8 +8,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
-    <script src="app\lib\angular.min.js"></script>
-    <script src="app\app.js"></script>
 </head>
 <body>
 	<!--Encabezado de la página-->
@@ -102,15 +100,74 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="col-lg-1">árbol de preguntas, quices y temas</div>
-	<div class="content">
-        <div ng-controller="cursosController" class="col-lg-3">
-            <ul>
-                <li ng-repeat="thing in things">{{thing}}</li>
-            </ul>
+	<!--INICIO DEL TREE MENU-->
+    <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well no-padding">
+            <div>
+                <ul class="nav nav-list nav-menu-list-style">
+                    <li><label class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Bootstrap
+                                <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                        <ul class="nav nav-list tree bullets">
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">CSS <span class="badge">42</span></a></li>
+                            <li><label class="tree-toggle nav-header">Buttons</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">Colors</a></li>
+                                    <li><a href="#">Sizes</a></li>
+                                    <li><label class="tree-toggle nav-header">Forms</label>
+                                        <ul class="nav nav-list tree">
+                                            <li><a href="#">Horizontal</a></li>
+                                            <li><a href="#">Vertical</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><label class="tree-toggle nav-header">Responsive</label>
+                        <ul class="nav nav-list tree">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><label class="tree-toggle nav-header">Media Queries</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">Text</a></li>
+                                    <li><a href="#">Images</a></li>
+                                      <li><label class="tree-toggle nav-header">Mobile Devices</label>
+                                        <ul class="nav nav-list tree">
+                                            <li><a href="#">iPhone</a></li>
+                                            <li><a href="#">Samsung</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><label class="tree-toggle nav-header">Coding</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">JavaScript</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                    <li><label class="tree-toggle nav-header">HTML DOM</label>
+                                        <ul class="nav nav-list tree">
+                                            <li><a href="#">DOM Elements</a></li>
+                                            <li><a href="#">Recursive</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
         </div>
     </div>
+    <!--FIN DEL TREE MENU-->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="personalJS.js"></script>
 
 </body>
 </html>
